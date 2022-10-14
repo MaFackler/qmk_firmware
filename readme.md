@@ -34,3 +34,37 @@ QMK is developed and maintained by Jack Humbert of OLKB with contributions from 
 ## Official Website
 
 [qmk.fm](https://qmk.fm) is the official website of QMK, where you can find links to this page, the documentation, and the keyboards supported by QMK.
+
+
+## Personal Notes
+
+Initial setup of qmk
+```bash
+./util/qmk_install.sh
+make git-submodule
+
+python -m venv myenv
+source myenv/bin/activate
+pip install qmk
+
+# in the utils folder there are some udev rules maybe they have to be put on the system
+# also consider user qmk doctor to trouble shoot
+```
+
+Build dz60 keyboard.
+Bootloader mode unplug, space + 'b', plug
+
+```
+make dz60:maxi
+make dz60:maxi:flash
+```
+
+Build kbd75 keyboard.
+Bootloader mode unplug, fn (on the top) + backspace, plug
+
+```
+make kbdfans/kbd75:maxi
+make kbdfans/kbd75:maxi:flash
+```
+
+
