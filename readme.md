@@ -51,9 +51,16 @@ pip install qmk
 # also consider user qmk doctor to trouble shoot
 ```
 
+Layouts:
+I defined my two layouts in mylayout60.c and mylayout75.c.
+These layouts are included by the keyboards
+keyboard/dz60/keymaps/maxi/keymap.c
+keyboard/kbdfans/kbd75/keymaps/maxi/keymap.c
+
+
 Build dz60 keyboard.
 Bootloader mode unplug, space + 'b', plug
-
+If space + 'b' is not working try: unplug, escape, plug
 ```
 make dz60:maxi
 make dz60:maxi:flash
